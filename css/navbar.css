@@ -1,0 +1,97 @@
+/* General Navbar Styles */
+.navbar {
+    padding: 1rem 1.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand .logo {
+    height: 5.2em;
+    object-fit: contain;
+}
+
+/* Navbar Links */
+.navbar-links {
+    color: #000;
+    font-weight: 600;
+    font-size: 1.4em;
+    border-bottom: 0.2em solid transparent;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navbar-links:hover,
+.active-link {
+    color: var(--primary-color);
+    border-bottom: 0.2em solid var(--primary-color);
+}
+
+/* Dropdown Styles */
+.dropdown1 {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    min-width: 16em;
+    box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 0.5em;
+}
+
+.dropdown-content a {
+    display: block;
+    color: white;
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown1:hover .dropdown-content {
+    display: block;
+}
+
+/* Mobile Drawer */
+.drawer {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: white;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    padding: 1rem;
+}
+
+.drawer.open {
+    left: 0;
+}
+
+.drawer .close-btn {
+    font-size: 2rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+/* Search Bar */
+.search-bar {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 1em;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}

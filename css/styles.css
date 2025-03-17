@@ -1,0 +1,210 @@
+:root {
+    --primary-color: #3cb6a0;
+
+    --light-contrast: rgba(250, 243, 224);
+    --dark-contrast: rgba(230, 210, 169);
+    /*Other Color being considered: 089abb*/
+    /*Other Color being considered: ef3e00 (Orange)*/
+    /** Older Green 8fae2d**/
+    --primary-font-family: "Montserrat", sans-serif;
+}
+
+body {
+    max-width: 100vw;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    font-family: var(--primary-font-family) !important;
+}
+
+.MuiTypography-root {
+    font-family: var(--primary-font-family) !important;
+    font-weight: 500;
+}
+
+.MuiAccordionSummary-root .MuiSvgIcon-root {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title-logo {
+    font-weight: 700;
+}
+
+.manufacturing-unit-images {
+    transition: 0.3s;
+}
+
+.manufacturing-unit-images:hover {
+    transform: scale(1.05);
+}
+
+.MuiListItemIcon-root {
+    min-width: 25px !important;
+}
+
+.color-primary {
+    color: var(--primary-color) !important;
+}
+
+.background-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.loading-button {
+    background: var(--primary-color) !important;
+    color: white !important;
+    border: 2px solid var(--primary-color) !important;
+    border-radius: 1.5em !important;
+    font-weight: 600 !important;
+    font-family: var(--primary-font-family) !important;
+    font-size: calc(0.6rem + 0.5vw) !important;
+    transition: 0.5s !important;
+}
+
+.loading-button:hover {
+    background: var(--primary-color) !important;
+    color: white !important;
+}
+
+/* RHFTextField.css */
+
+.MuiTextField-root {
+    width: 100%;
+}
+
+.MuiFilledInput-root {
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.MuiFilledInput-underline:after {
+    border-bottom-color: var(--primary-color) !important;
+}
+
+.MuiInputLabel-filled {
+    color: #b8b8b8;
+}
+
+.MuiInputLabel-filled.Mui-focused {
+    color: var(--primary-color);
+}
+
+.font--size-1125 {
+    font-size: "1.125em" !important;
+}
+
+.MuiDivider-root {
+    border-color: black !important;
+}
+
+.mb--25 {
+    margin-bottom: 20px !important;
+}
+
+.icon-small {
+    font-size: small !important;
+}
+
+.fw-600 {
+    font-weight: 600 !important;
+}
+
+
+/* SWIPER Classes to have custom navigation buttons */
+.swiper-nav-prev,
+.swiper-nav-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+}
+
+.swiper-nav-next {
+    right: 0%;
+}
+
+.swiper-nav-prev {
+    left: 0%;
+}
+
+.swiper-nav-prev::after,
+.swiper-nav-next::after {
+    content: "";
+}
+
+/* General Carousel Styling */
+.carousel {
+    height: 60vh;
+    position: relative;
+}
+
+/* Individual Slide Styling */
+.carouselItem {
+    position: relative;
+}
+
+/* Image Container */
+.imageContainer {
+    position: relative;
+}
+
+/* Image Styling */
+.image {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+/* Text Overlay Styling */
+.textContainer {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: start;
+    color: white;
+    font-family: "Montserrat", sans-serif !important;
+}
+
+/* Title Styling */
+.title {
+    font-weight: 700;
+}
+
+/* Button Styling */
+.btn-lg {
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+/* Hover Effects */
+.btn-lg:hover {
+    background: black;
+    color: white;
+}
+
+/* Zoom In Animation */
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.zoomInAnimation {
+    animation: zoomIn 5s ease-in-out;
+    animation-fill-mode: both;
+}
