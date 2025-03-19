@@ -12,22 +12,11 @@
 body {
     max-width: 100vw;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     font-family: var(--primary-font-family) !important;
-}
-
-.MuiTypography-root {
-    font-family: var(--primary-font-family) !important;
-    font-weight: 500;
-}
-
-.MuiAccordionSummary-root .MuiSvgIcon-root {
-    color: white;
+    transition: .3s all;
 }
 
 a {
@@ -44,10 +33,6 @@ a {
 
 .manufacturing-unit-images:hover {
     transform: scale(1.05);
-}
-
-.MuiListItemIcon-root {
-    min-width: 25px !important;
 }
 
 .color-primary {
@@ -74,35 +59,8 @@ a {
     color: white !important;
 }
 
-/* RHFTextField.css */
-
-.MuiTextField-root {
-    width: 100%;
-}
-
-.MuiFilledInput-root {
-    background-color: #fff;
-    transition: background-color 0.3s;
-}
-
-.MuiFilledInput-underline:after {
-    border-bottom-color: var(--primary-color) !important;
-}
-
-.MuiInputLabel-filled {
-    color: #b8b8b8;
-}
-
-.MuiInputLabel-filled.Mui-focused {
-    color: var(--primary-color);
-}
-
 .font--size-1125 {
     font-size: "1.125em" !important;
-}
-
-.MuiDivider-root {
-    border-color: black !important;
 }
 
 .mb--25 {
@@ -207,4 +165,86 @@ a {
 .zoomInAnimation {
     animation: zoomIn 5s ease-in-out;
     animation-fill-mode: both;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+}
+
+footer h4 {
+    font-weight: 600;
+}
+
+footer a:hover {
+    transition: .3s all;
+    color: var(--primary-color) !important;
+}
+
+.text-muted {
+    font-size: 0.9em;
+}
+
+/* Social Icons */
+.social-icon a {
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon a:hover {
+    transform: scale(1.2);
+}
+
+.counter-number {
+    font-size: 2em;
+    font-weight: bold;
+    color: #3cb6a0;
+}
+
+.counter-label {
+    font-size: 1em;
+    color: #333;
+}
+
+.certificate-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fafafa;
+    height: 15em;
+    margin: 1.5em;
+    border-radius: 15px;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    padding: 15px;
+}
+
+.certificate-box img {
+    height: 11em;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    transition: .3s all;
+}
+
+.certificate-box:hover {
+    background: linear-gradient(to bottom, rgba(60, 182, 160, 0.7) 0%, rgba(30, 69, 107, 0.7) 130%);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cert-link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 10px;
+    display: block;
+    transition: color 0.3s ease-in-out;
+}
+
+.cert-text {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 10px;
 }
