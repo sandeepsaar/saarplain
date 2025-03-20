@@ -22,7 +22,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="images/LogoAqua.jpg" alt="Saar Biotech" class="logo">
@@ -69,6 +69,21 @@
                         </ul>
                     </li>
 
+                    <!-- Events Dropdown -->
+                    <li class="nav-item dropdown1">
+                        <a class="nav-link navbar-links" href="#" onclick="toggleDropdown('eventsDropdown')">Events</a>
+                        <ul class="dropdown-content" id="eventsDropdown">
+                            <li><a href="saar-biotech.html" class="navbar-dropdown-links">B2B</a></li>
+                            <li><a href="dm-pharma.html" class="navbar-dropdown-links">Pharma South 2014</a></li>
+                            <li><a href="infrastructure.html" class="navbar-dropdown-links">Indian Pharma 2013</a></li>
+                            <li><a href="video.html" class="navbar-dropdown-links">Indian Pharma 2012</a></li>
+                            <li><a href="saar-biotech.html" class="navbar-dropdown-links">Brochure</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link navbar-links" href="about.html">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link navbar-links" href="about.html">Articles</a></li>
+
                     <li class="nav-item"><a class="nav-link navbar-links" href="contact.html">Contact</a></li>
 
                     <!-- Search Icon -->
@@ -111,7 +126,7 @@
                         <h1 class="title text-dark">Discovering Hope in</h1>
                         <h1 class="title mb-4 color-primary">Every Dose</h1>
                         <a href="about.html">
-                            <button class="btn btn-primary btn-lg">LEARN MORE</button>
+                            <button class="btn btn-learn-more">LEARN MORE</button>
                         </a>
                     </div>
                 </div>
@@ -124,7 +139,7 @@
                         <h1 class="title text-dark">Your Health is always</h1>
                         <h1 class="title mb-4 color-primary">Our Priority</h1>
                         <a href="about.html">
-                            <button class="btn btn-primary btn-lg">LEARN MORE</button>
+                            <button class="btn btn-learn-more">LEARN MORE</button>
                         </a>
                     </div>
                 </div>
@@ -137,7 +152,7 @@
                         <h1 class="title text-dark">From Research</h1>
                         <h1 class="title mb-4 color-primary">to Recovery</h1>
                         <a href="about.html">
-                            <button class="btn btn-primary btn-lg">LEARN MORE</button>
+                            <button class="btn btn-learn-more">LEARN MORE</button>
                         </a>
                     </div>
                 </div>
@@ -145,7 +160,7 @@
         </div>
 
         <!-- Carousel Navigation Buttons -->
-        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-pagination"></div> -->
         <!-- <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div> -->
     </div>
@@ -177,6 +192,423 @@
     </div>
 
     <!-- Products Component Placeholder -->
+    <div style="background-color: #faf3e0;">
+        <div class="container py-5">
+            <h2 class="text-center fw-bold text-success mb-4">Featured Products</h2>
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <a href="/product/levocetirizine-dihcl">
+                            <img src="images/products/levocetirizine-dihcl2.jpg" class="card-img-top"
+                                alt="Levocetirizine Dihydrochloride">
+                        </a>
+                        <div class="card-body text-center">
+                            <a href="/product/levocetirizine-dihcl"
+                                class="h5 text-dark text-decoration-none">Levocetirizine
+                                Dihydrochloride</a>
+                            <p class="text-muted small mt-2">Levocetirizine is an antihistamine that reduces the natural
+                                chemical histamine in the body.</p>
+                            <a href="/product/levocetirizine-dihcl" class="btn btn-learn-more px-4 py-2">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <a href="/product/sodium-alginate">
+                            <img src="images/products/sodium-alginate2.jpg" class="card-img-top" alt="Sodium Alginate">
+                        </a>
+                        <div class="card-body text-center">
+                            <a href="/product/sodium-alginate" class="h5 text-dark text-decoration-none">Sodium Alginate
+                                Oral
+                                Suspension</a>
+                            <p class="text-muted small mt-2">This compound acts as a fast-acting antacid that
+                                neutralizes
+                                stomach acid.</p>
+                            <a href="/product/sodium-alginate" class="btn btn-learn-more px-4 py-2">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <a href="/product/cholecalciferol(vitamin-d3)-shots">
+                            <img src="images/products/cough/Cholecalciferol_Vitamin D3_Shots.png" class="card-img-top"
+                                alt="Cholecalciferol Vitamin D3">
+                        </a>
+                        <div class="card-body text-center">
+                            <a href="/product/cholecalciferol(vitamin-d3)-shots"
+                                class="h5 text-dark text-decoration-none">Cholecalciferol Vitamin D3 Shots</a>
+                            <p class="text-muted small mt-2">These vitamin D3 shots help to get rid of bone disorders
+                                such
+                                as
+                                rickets and osteomalacia in children.</p>
+                            <a href="/product/cholecalciferol(vitamin-d3)-shots"
+                                class="btn btn-learn-more px-4 py-2">Learn
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <a href="/product/levodropropizine-chlorpheniramine-syrup">
+                            <img src="images/products/cough/Levodropropizine_and_Chlorpheniramine Syrup.jpg"
+                                class="card-img-top" alt="Levodropropizine and Chlorpheniramine">
+                        </a>
+                        <div class="card-body text-center">
+                            <a href="/product/levodropropizine-chlorpheniramine-syrup"
+                                class="h5 text-dark text-decoration-none">Levodropropizine & Chlorpheniramine Syrup</a>
+                            <p class="text-muted small mt-2">This syrup combines Levodropropizine and Chlorpheniramine
+                                to
+                                relieve cough and allergy symptoms.</p>
+                            <a href="/product/levodropropizine-chlorpheniramine-syrup"
+                                class="btn btn-learn-more px-4 py-2">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- See More Button -->
+            <div class="text-end mt-3">
+                <a href="/products" class="btn btn-outline-dark">See More . . .</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container my-5">
+        <h2 class="text-center fw-bold text-success display-5">
+            Discover Our Extensive Product Range
+        </h2>
+        <p class="text-center text-muted px-md-5 px-2">
+            Discover Limitless Solutions with Saar Biotech's Dynamic Product Lineup.
+            From Antibiotics to Antacids, each product reflects our dedication to excellence
+            and innovation.
+        </p>
+
+        <!-- First Swiper: Categories -->
+        <div class="swiper mySwiper mt-4">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/antibiotic">
+                            <img src="images/categories/antibiotic.jpg" class="card-img-top" alt="Antibiotic">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Antibiotic</h5>
+                            <p class="text-muted small mt-2">Fight off infections and get back on your feet faster with
+                                our range of antibiotics.</p>
+                            <a href="/products/antibiotic" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/anticold">
+                            <img src="images/categories/anticold.jpg" class="card-img-top" alt="Anticold">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Anticold</h5>
+                            <p class="text-muted small mt-2">Ease your cold symptoms and get relief from sniffles,
+                                congestion, and cough with our trusted anticold remedies.</p>
+                            <a href="/products/anticold" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/analgesic-anti-inflammatory">
+                            <img src="images/categories/analgesic--anti-inflammatory.jpg" class="card-img-top"
+                                alt="Analgesic">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Analgesic - Anti-Inflammatory</h5>
+                            <p class="text-muted small mt-2">Banish pain and inflammation with our powerful yet gentle
+                                analgesics and anti-inflammatory medications.</p>
+                            <a href="/products/analgesic-anti-inflammatory" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/antacid">
+                            <img src="images/categories/antacid.jpg" class="card-img-top" alt="Antacid">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Antacid</h5>
+                            <p class="text-muted small mt-2">Say goodbye to heartburn and indigestion with our soothing
+                                antacids for fast relief.</p>
+                            <a href="/products/antacid" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/syrups">
+                            <img src="images/categories/dry-syrup.jpg" class="card-img-top" alt="Syrups">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Dry Syrup</h5>
+                            <p class="text-muted small mt-2">Make medication time easier for your little ones with our
+                                convenient and delicious dry syrup formulations.</p>
+                            <a href="/products/syrups" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/syrups">
+                            <img src="images/categories/tonic-syrup.jpg" class="card-img-top" alt="Syrups">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Tonic Syrup</h5>
+                            <p class="text-muted small mt-2">Boost your energy levels and overall health with our
+                                revitalizing tonic syrups packed with essential vitamins and
+                                minerals.</p>
+                            <a href="/products/syrups" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/syrups">
+                            <img src="images/categories/drops.jpg" class="card-img-top" alt="Syrups">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Drops</h5>
+                            <p class="text-muted small mt-2">Find relief for your eyes and ears with our gentle drops
+                                designed to soothe and heal.</p>
+                            <a href="/products/syrups" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/syrups">
+                            <img src="images/categories/cough-syrup.jpg" class="card-img-top" alt="Syrups">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Cough Syrup</h5>
+                            <p class="text-muted small mt-2">Soothe your throat and quiet your cough with our effective
+                                and great-tasting cough syrups.</p>
+                            <a href="/products/syrups" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/syrups">
+                            <img src="images/categories/nasal-sprays.jpg" class="card-img-top" alt="Syrups">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Nasal Sprays</h5>
+                            <p class="text-muted small mt-2">Breathe easy again with our fast-acting nasal sprays that
+                                provide relief from congestion and allergies.</p>
+                            <a href="/products/syrups" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/syrups">
+                            <img src="images/categories/ointments.jpg" class="card-img-top" alt="Syrups">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Ointments</h5>
+                            <p class="text-muted small mt-2">Nourish and protect your skin with our healing ointments
+                                for cuts, burns, and skin irritations.</p>
+                            <a href="/products/syrups" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/syrups">
+                            <img src="images/categories/shampoo.jpg" class="card-img-top" alt="Syrups">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Shampoos</h5>
+                            <p class="text-muted small mt-2">Keep your hair healthy and vibrant with our specially
+                                formulated shampoos for all hair types and concerns.</p>
+                            <a href="/products/syrups" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/syrups">
+                            <img src="images/categories/lotions.jpg" class="card-img-top" alt="Syrups">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Lotions</h5>
+                            <p class="text-muted small mt-2">Indulge your skin with our luxurious lotions that hydrate,
+                                soothe, and pamper from head to toe.</p>
+                            <a href="/products/syrups" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/syrups">
+                            <img src="images/categories/roll-ons.jpg" class="card-img-top" alt="Syrups">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Roll Ons</h5>
+                            <p class="text-muted small mt-2">Experience targeted relief and on-the-go convenience with
+                                our easy-to-use roll-on remedies.</p>
+                            <a href="/products/syrups" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/suspensions">
+                            <img src="images/categories/suspensions.jpg" class="card-img-top" alt="Suspensions">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Suspensions</h5>
+                            <p class="text-muted small mt-2">Our suspensions offer easy-to-administer liquid medications
+                                for children and adults alike, ensuring precise dosing and
+                                effective treatment.</p>
+                            <a href="/products/suspensions" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/syrups">
+                            <img src="images/categories/tablets.jpg" class="card-img-top" alt="Syrups">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Tablets</h5>
+                            <p class="text-muted small mt-2">Convenient and reliable, our tablets provide effective
+                                relief for a variety of conditions, delivering precise doses of
+                                medication with each swallow.</p>
+                            <a href="/products/syrups" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/syrups">
+                            <img src="images/categories/syrups.jpg" class="card-img-top" alt="Syrups">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Syrups</h5>
+                            <p class="text-muted small mt-2">Delicious and easy to swallow, our syrups provide fast
+                                relief from a range of symptoms, making medication time a little
+                                sweeter.</p>
+                            <a href="/products/syrups" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/sachets">
+                            <img src="images/categories/capsules.jpg" class="card-img-top" alt="Sachets">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Capsules</h5>
+                            <p class="text-muted small mt-2">Encapsulate your health with our convenient capsules,
+                                delivering precise doses of medication in an easy-to-swallow form..</p>
+                            <a href="/products/sachets" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/sachets">
+                            <img src="images/categories/sachets.jpg" class="card-img-top" alt="Sachets">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Sachets</h5>
+                            <p class="text-muted small mt-2">Convenient and portable, our sachets contain single doses
+                                of medication, perfect for on-the-go relief whenever and
+                                wherever you need it.</p>
+                            <a href="/products/sachets" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Second Swiper -->
+        <div class="swiper mySwiper mt-4">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/antibiotic">
+                            <img src="images/categories/suspensions.jpg" class="card-img-top" alt="Antibiotic">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Suspensions</h5>
+                            <p class="text-muted small mt-2">Our suspensions offer easy-to-administer liquid medications
+                                for children and adults alike, ensuring precise dosing and
+                                effective treatment.</p>
+                            <a href="/products/antibiotic" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/antibiotic">
+                            <img src="images/categories/syrups.jpg" class="card-img-top" alt="Antibiotic">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Syrups</h5>
+                            <p class="text-muted small mt-2">Delicious and easy to swallow, our syrups provide fast
+                                relief from a range of symptoms, making medication time a little
+                                sweeter.</p>
+                            <a href="/products/antibiotic" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card shadow-sm">
+                        <a href="/products/antibiotic">
+                            <img src="images/categories/sachets.jpg" class="card-img-top" alt="Antibiotic">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Sachets</h5>
+                            <p class="text-muted small mt-2">Convenient and portable, our sachets contain single doses
+                                of medication, perfect for on-the-go relief whenever and
+                                wherever you need it.</p>
+                            <a href="/products/antibiotic" class="btn btn-learn-more">Know More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+
 
     <div class="container text-center my-5">
         <h3>Our Certifications</h3>
