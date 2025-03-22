@@ -1,0 +1,59 @@
+:root {
+    --primary-color: #3cb6a0;
+
+    --light-contrast: rgba(250, 243, 224);
+    --dark-contrast: rgba(230, 210, 169);
+    /*Other Color being considered: 089abb*/
+    /*Other Color being considered: ef3e00 (Orange)*/
+    /** Older Green 8fae2d**/
+    --primary-font-family: "Montserrat", sans-serif;
+}
+
+body {
+    max-width: 100vw;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    font-family: var(--primary-font-family) !important;
+    transition: .3s all;
+}
+
+.sticky-col {
+    position: sticky;
+    top: 20px;
+    /* Adjust as needed */
+    height: fit-content;
+}
+
+.content {
+    height: auto;
+    /* Just for demo purposes */
+    overflow-y: auto;
+}
+
+#pdf-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.nav-link,
+.nav-link:hover {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.nav-tabs {
+    justify-content: center;
+}
+
+.box {
+    background: #f0f0f0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: justify;
+    border-radius: 25px;
+}
+
+.box:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
