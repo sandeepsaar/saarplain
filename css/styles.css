@@ -382,3 +382,7 @@ footer a:hover {
 .swiper-pagination .swiper-pagination-bullet-active {
     background: var(--primary-color);
 }
+
+.disc-style-list {
+    list-style: disc !important;
+}

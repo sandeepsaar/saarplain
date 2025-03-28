@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Java Developer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <script src="../js/script.js"></script>
+    <script src="../js/navbar.js"></script>
+    <style>
+        :root {
+            --primary-color: #3cb6a0;
+            --primary-font-family: "Montserrat", sans-serif;
+        }
+
+        body {
+            font-family: var(--primary-font-family) !important;
+        }
+
+        .back-btn {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .back-btn:hover {
+            border-color: #359d8e;
+            background-color: #e5f7f5;
+            color: #359d8e;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .apply-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .apply-btn:hover {
+            background-color: #359d8e;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="../images/LogoAqua.jpg" alt="Saar Biotech" class="logo">
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button class="navbar-toggler" type="button" onclick="toggleDrawer()">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link navbar-links" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link navbar-links" href="about.html">About</a></li>
+
+                    <!-- Manufacturing Unit Dropdown -->
+                    <li class="nav-item dropdown1">
+                        <a class="nav-link navbar-links" href="#"
+                            onclick="toggleDropdown('manufacturingDropdown')">Manufacturing Unit</a>
+                        <ul class="dropdown-content" id="manufacturingDropdown">
+                            <li><a href="saar-biotech.html" class="navbar-dropdown-links">Saar Biotech</a></li>
+                            <li><a href="dm-pharma.html" class="navbar-dropdown-links">DM Pharma</a></li>
+                            <li><a href="infrastructure.html" class="navbar-dropdown-links">Infrastructure</a></li>
+                            <li><a href="video.html" class="navbar-dropdown-links">Factory Video</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Products Dropdown -->
+                    <li class="nav-item dropdown1">
+                        <a class="nav-link navbar-links" href="#"
+                            onclick="toggleDropdown('productsDropdown')">Products</a>
+                        <ul class="dropdown-content" id="productsDropdown">
+                            <li><a href="suspensions.html" class="navbar-dropdown-links">Suspensions</a></li>
+                            <li><a href="syrups.html" class="navbar-dropdown-links">Syrups</a></li>
+                            <li><a href="external-preparations.html" class="navbar-dropdown-links">External
+                                    Preparation</a>
+                            </li>
+                            <li><a href="misc-products.html" class="navbar-dropdown-links">Miscellaneous Products</a>
+                            </li>
+                            <li><a href="tablets.html" class="navbar-dropdown-links">Tablets</a></li>
+                            <li><a href="capsules.html" class="navbar-dropdown-links">Capsules</a></li>
+                            <li><a href="sachets.html" class="navbar-dropdown-links">Sachets</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Events Dropdown -->
+                    <li class="nav-item dropdown1">
+                        <a class="nav-link navbar-links" href="#" onclick="toggleDropdown('eventsDropdown')">Events</a>
+                        <ul class="dropdown-content" id="eventsDropdown">
+                            <li><a href="saar-biotech.html" class="navbar-dropdown-links">B2B</a></li>
+                            <li><a href="dm-pharma.html" class="navbar-dropdown-links">Pharma South 2014</a></li>
+                            <li><a href="infrastructure.html" class="navbar-dropdown-links">Indian Pharma 2013</a></li>
+                            <li><a href="video.html" class="navbar-dropdown-links">Indian Pharma 2012</a></li>
+                            <li><a href="saar-biotech.html" class="navbar-dropdown-links">Brochure</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link navbar-links" href="about.html">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link navbar-links" href="about.html">Articles</a></li>
+
+                    <li class="nav-item"><a class="nav-link navbar-links" href="contact.html">Contact</a></li>
+
+                    <!-- Search Icon -->
+                    <li class="nav-item">
+                        <button class="btn btn-light" onclick="toggleSearchBar()">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileDrawer" class="drawer">
+        <button class="close-btn" onclick="toggleDrawer()">&times;</button>
+        <ul class="drawer-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="manufacturing-unit.html">Manufacturing Unit</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <div class="container mt-4">
+        <button id="backToJobs" class="btn back-btn mb-3">Back to Job Listings</button>
+        <h1 class="section-title"><i class="fa fa-briefcase display-1 me-3"></i> Full Stack Java Developer</h1>
+        <p class="fs-6">Saar Biotech is seeking a talented and motivated Software Development Intern to join our
+            dynamic team.</p>
+        <hr>
+        <h5 class="section-title"><i class="fa fa-file-alt me-2"></i> Job Description</h5>
+        <p>As an intern, you will contribute to the development and maintenance of our software applications. You will
+            have the
+            opportunity to work on real-world projects, learn from experienced professionals, and gain valuable industry
+            experience.</p>
+
+        <h6 class="section-title">Responsibilities</h6>
+        <ul class="disc-style-list">
+            <li>Develop and maintain web applications using Java and Spring Boot frameworks.</li>
+            <li>Design, implement, and test software components.</li>
+            <li>Work with databases (MySQL) to store and retrieve data efficiently.</li>
+            <li>Utilize cloud platforms (AWS) for application deployment and management.</li>
+            <li>Collaborate with cross-functional teams to understand requirements and deliver solutions.</li>
+            <li>Participate in code reviews and provide constructive feedback.</li>
+            <li>Learn and adapt to new technologies and industry trends.</li>
+        </ul>
+
+        <h6 class="section-title">Qualifications</h6>
+        <ul class="disc-style-list">
+            <li>Pursuing or recently completed a Bachelor's degree in Computer Science, Information Technology, or a
+                related field.</li>
+            <li>Strong programming skills in Java and a good understanding of object-oriented programming concepts.</li>
+            <li>Experience with web development technologies (HTML, CSS, JavaScript) is a plus.</li>
+            <li>Familiarity with database systems (MySQL) and SQL.</li>
+            <li>Knowledge of version control systems (Git, GitHub).</li>
+            <li>Proficiency in development tools (IntelliJ, VS Code).</li>
+            <li>Strong analytical and problem-solving skills.</li>
+            <li>Ability to work independently and as part of a team.</li>
+            <li>Passion for technology and a desire to learn</li>
+        </ul>
+
+        <h6 class="section-title">Preferred Qualifications</h6>
+        <ul class="disc-style-list">
+            <li>Experience with Spring Boot.</li>
+            <li>Exposure to cloud computing platforms (AWS).</li>
+            <li>Knowledge of software development methodologies (Agile, Scrum).</li>
+        </ul>
+
+        <p>We offer a stimulating work environment, opportunities for professional growth, and the chance to contribute
+            to
+            innovative projects.</p>
+        <button id="applyBtn" class="btn apply-btn">Apply For This Job</button>
+    </div>
+
+    <div id="applyForm" class="container mt-4" style="display:none;">
+        <div class="card p-3">
+            <h5>Apply for Full Stack Java Developer</h5>
+            <input type="text" class="form-control mb-2" placeholder="Your Name">
+            <input type="email" class="form-control mb-2" placeholder="Your Email">
+            <textarea class="form-control mb-2" placeholder="Cover Letter"></textarea>
+            <button class="btn apply-btn">Submit</button>
+            <button id="closeForm" class="btn btn-secondary mt-2">Close</button>
+        </div>
+    </div>
+
+    <br />
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-4">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <!-- Contact Us -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <h4>Contact Us</h4>
+                    <p><strong>Mr. Abhinav Aggrawal</strong></p>
+                    <p class="color-primary">(Chief Operating Officer)</p>
+                    <p>
+                        <a href="tel:+919357888588" class="text-light text-decoration-none">
+                            <i class="fas fa-phone-alt"></i> +91 9357 888 588
+                        </a>
+                    </p>
+                    <p>
+                        <a href="mailto:abhinav@dmpharma.org" class="text-light text-decoration-none">
+                            <i class="fas fa-envelope"></i> abhinav@dmpharma.org
+                        </a>
+                    </p>
+                </div>
+
+                <!-- Product Queries -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <h4>For Product Queries Call</h4>
+                    <p><strong>Mr. Vijay</strong></p>
+                    <p class="color-primary">(Marketing Manager)</p>
+                    <p>
+                        <a href="tel:+919357690454" class="text-light text-decoration-none">
+                            <i class="fas fa-phone-alt"></i> +91 9357 690 454
+                        </a>
+                    </p>
+                    <p>
+                        <a href="mailto:quotation@saarbiotech.com" class="text-light text-decoration-none">
+                            <i class="fas fa-envelope"></i> quotation@saarbiotech.com
+                        </a>
+                    </p>
+                </div>
+
+                <!-- Follow Us -->
+                <div class="col-12 col-md-4 mb-4 text-center">
+                    <h4>Follow Us on</h4>
+                    <div class="d-flex justify-content-center gap-3 mt-3 social-icon">
+                        <a href="https://x.com/SaarBiotech" target="_blank" class="text-light fs-4">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.facebook.com/SaarBiotech" target="_blank" class="text-light fs-4">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/saarbiotech" target="_blank" class="text-light fs-4">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://instagram.com/saarbiotech" target="_blank" class="text-light fs-4">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-primary my-3">
+            <p class="text-center text-light m-0">
+                &copy; <span class="color-primary">Saar Biotech</span>. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("backToJobs").addEventListener("click", function () {
+                window.location.href = '/career';
+            });
+            document.getElementById("applyBtn").addEventListener("click", function () {
+                document.getElementById("applyForm").style.display = "block";
+            });
+            document.getElementById("closeForm").addEventListener("click", function () {
+                document.getElementById("applyForm").style.display = "none";
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="code.js"></script>
+
+</body>
+
+</html>

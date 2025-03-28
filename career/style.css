@@ -1,0 +1,53 @@
+/* File: styles.css */
+:root {
+    --primary-color: #3cb6a0;
+
+    --light-contrast: rgba(250, 243, 224);
+    --dark-contrast: rgba(230, 210, 169);
+    /*Other Color being considered: 089abb*/
+    /*Other Color being considered: ef3e00 (Orange)*/
+    /** Older Green 8fae2d**/
+    --primary-font-family: "Montserrat", sans-serif;
+}
+
+body {
+    max-width: 100vw;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    font-family: var(--primary-font-family) !important;
+    transition: .3s all;
+    text-align: justify;
+}
+
+.search-bar input {
+    border-color: var(--primary-color);
+}
+
+.search-bar input:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 5px var(--primary-color) !important;
+}
+
+.search-bar label {
+    color: var(--primary-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #359d8e;
+    border-color: #359d8e;
+}
+
+.job-card {
+    border: 1px solid #a8ded4;
+}
+
+.color-primary {
+    color: var(--primary-color);
+}
