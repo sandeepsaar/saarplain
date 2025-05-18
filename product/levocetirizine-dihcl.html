@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saar Biotech- Levocetirizine Dihydrochloride Suspension|Third party Medicine Manufacturing</title>
+    <meta name="description"
+        content="Saar Biotech is  a third party manufacturing company which is situated in Baddi,Himachal Pradesh.levocetirizine is an antihistamine that reduces the natural chemical histamine in the body. Histamine can produce symptoms of sneezing, itching, watery eyes, and runny nose. Levocetirizine Hcl works by blocking the actions of histamine.">
+    <meta name="keywords"
+        content="Levocetirizine Dihydrochloride suspension, Levocetirizine Dihydrochloride dosage, Levocetirizine Dihydrochloride side effects, Levocetirizine Dihydrochloride uses, Levocetirizine Dihydrochloride cobination, Levocetirizine Dihydrochloride composition, Levocetirizine Dihydrochloride indication, Levocetirizine side effects, Levocetirizine dosage, Allergic Rhinitis, Chronic Idiopathic Urticaria">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="product.js"></script>
+    <script src="../js/searchscript.js"></script>
+    <script src="../js/navbar.js"></script>
+</head>
+
+<body>
+    <special-header></special-header>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div>
+            <div class="row row1">
+                <div class="col-md-6">
+
+                    <img src="../images/products/levocetirizine-dihcl1.png" width="100%" id="ProductImg"
+                        class="single_project_thumb" onclick="openModal(this.src)">
+                    <div class="small-imgs-wrapper">
+                        <div class="small-imgs">
+                            <img src="../images/products/levocetirizine-dihcl1.png" width="100%" class="small-img">
+                            <img src="../images/products/levocetirizine-dihcl2.png" width="100%" class="small-img">
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div id="imageModal" class="modal" onclick="closeModal()">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <img class="modal-content" id="modalImage">
+                    </div>
+                    <script>
+                        function openModal(src) {
+                            const modal = document.getElementById("imageModal");
+                            const modalImage = document.getElementById("modalImage");
+                            // modal.style.display = "block";
+                            modal.style.display = "flex";
+                            modalImage.src = src;
+                        }
+
+                        function closeModal() {
+                            const modal = document.getElementById("imageModal");
+                            modal.style.display = "none";
+                        }
+                    </script>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="styled-heading mb-5">Levocetirizine Dihydrochloride</h4>
+                    <h4 class="responsive"><u>Product Highlights</u></h4>
+                    <h3 class="product-title"><b>Indications</b> -Seasonal and Perennial Allergic Rhinitis and Urticaria
+                    </h3>
+                    <h3 class="product-title"><b>Approved Name</b> -Levocetirizine Dihydrochloride</h3>
+                    <h4 class="responsive"><u>Suspension Presentation</u></h4>
+                    <h3 class="product-title"><b>Each 5 ml contains :</b> <br />
+                        Levocetirizine Dihydrochloride : 2.5 mg</h3>
+                    <div class="buttons">
+                        <div class="row text-center" >
+                            <div class="col-md-6 col-12 d-flex justify-content-center mb-2">
+                                <a href="#" target="_blank" data-product="Levocetirizine Dihydrochloride"
+                                    class="custom-btn whatsapp-btn" style="background: rgb(0, 200, 83);"><i
+                                        class="fab fa-whatsapp"></i> Whatsapp</a>
+                            </div>
+                            <div class="col-md-6 col-12 d-flex justify-content-center mb-2">
+                                <a href="#" id="mailBtn" class="custom-btn" style="background: rgb(66, 133, 244);"><i
+                                        class="fas fa-envelope"></i> Mail</a>
+                            </div>
+                            <div id="mailPopup" class="popup-overlay">
+                                <div class="popup-form">
+                                    <h3>Send Us a Message</h3>
+                                    <form action="/php/send-mail.php" method="POST">
+                                        <div style="display: flex; gap: 10px;">
+                                            <input type="text" name="full_name" placeholder="Full Name" required />
+                                            <input type="text" name="company_name" placeholder="Company Name"
+                                                required />
+                                        </div>
+                                        <div style="display: flex; gap: 10px; margin-top: 10px;">
+                                            <input type="email" name="email" placeholder="Email" required />
+                                            <input type="text" name="phone" placeholder="Phone" required />
+                                        </div>
+                                        <textarea name="message" rows="5" placeholder="Message"
+                                            required>Hello!&#10;Want to enquire about&#10;Product: Levocetirizine Dihydrochloride</textarea>
+                                        <button type="submit">SEND QUERY</button>
+                                    </form>
+                                    <span class="close-popup" onclick="closePopup()">✕</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="cart">
+            <div class="tab-wrapper">
+                <div class="wrapper">
+                    <div class="icon" id="left-btn"><i id="left" class="fa-solid fa-angle-left"></i></div>
+                    <ul class="tabs-box">
+                        <li class="tab" data-target="description">DESCRIPTION</li>
+                        <li class="tab" data-target="indications">INDICATIONS</li>
+                        <li class="tab" data-target="mechanism">MECHANISM</li>
+                        <li class="tab" data-target="pharmacokinetics">PHARMACOKINETICS</li>
+                        <li class="tab" data-target="interactions">INTERACTIONS</li>
+                        <li class="tab" data-target="contraindications">CONTRAINDICATIONS</li>
+                        <li class="tab" data-target="side effects">SIDE EFFECTS</li>
+                        <li class="tab" data-target="warning">WARNING</li>
+                        <li class="tab" data-target="storage">STORAGE</li>
+                        <li class="tab" data-target="conclusion">CONCLUSION</li>
+                    </ul>
+                    <div class="icon" id="right-btn"><i id="right" class="fa-solid fa-angle-right"></i></div>
+                </div>
+            </div>
+            <section>
+                <h3>Saar Biotech</h3>
+                <hr style="width: 35%;" />
+                <p>Saar Biotech Pvt. Ltd. is a distinguished <b>WHO-GMP certified</b> pharmaceutical manufacturing
+                    company
+                    in <b>Baddi,
+                        Chandigarh</b>, renowned for its dedication to quality and innovation. Since 2005, we have been
+                    at
+                    the
+                    forefront of the industry, operating from our state-of-the-art facility in Baddi, with a central
+                    office
+                    in Chandigarh.
+                    <br /><br />
+                    Specializing in <b>third-party contract</b> manufacturing, we partner with over 1700 clients to
+                    deliver
+                    a wide
+                    range of pharmaceutical products, including Suspensions,Syrups, Ointments, Roll Ons, covering
+                    various
+                    therapeutic segments. Our <b>extensive experience</b> and advanced technology make us a trusted
+                    choice
+                    for
+                    companies seeking reliable manufacturing solutions.
+                    <br /><br />
+                    At Saar Biotech, <b>quality and service</b> are our top priorities. Our <b>stringent quality
+                        standards</b> ensure each
+                    product meets regulatory requirements and exceeds customer expectations. We are committed to
+                    providing
+                    the <b>best service</b> and <b>product quality</b> in the industry.
+                    <br /><br />
+                    Join us at Saar Biotech, where health and quality converge. Experience the difference of partnering
+                    with
+                    a leader in pharmaceutical excellence. <b>Quote Now</b> to start your journey with us.
+                </p>
+                <br />
+                <h3 id="description">DESCRIPTION</h3>
+                <hr style="width: 35%;" />
+                <p><b>Levocetirizine Dihydrochloride Syrup :</b><br />
+                    Levocetirizine is an antihistamine which is used to treat various kinds of allergies. An allergy is
+                    an immune system response to foreign elements typically not harmful to the body. These foreign
+                    elements are known as 'allergens.' Allergic conditions vary from person to person. Some might be
+                    allergic to certain foods and seasonal allergies like hay fever. At the same time, others might be
+                    allergic to pollen or pet dander. Levocetirizine Hcl is used to treat symptoms of perennial
+                    allergies in adults and children who are at least 6 months old. Levocetirizine Hcl is also used to
+                    treat symptoms of seasonal allergies in adults and children who are at least 2 years old and it is
+                    also used to treat itching and swelling caused by chronic urticaria (hives) in adults and children
+                    who are at least 6 months old.
+                </p>
+                <br />
+                <h3 id="indications">Indications</h3>
+                <hr style="width: 35%;" />
+                <p><b>Allergic Rhinitis</b>: It is an allergic reaction that causes sneezing, congestion, itchy nose and
+                    watery eyes. Levocetirizine is indicated for the relief of symptoms associated with allergic
+                    rhinitis (seasonal and perennial) in adults and children 6 years of age and older.<br />
+                    <b>Chronic Idiopathic Urticaria</b>: Levocetirizine is indicated for the treatment of the
+                    uncomplicated skin manifestations of chronic idiopathic urticaria (red, itchy skin welts) in adults
+                    and children 6 years of age and older.<br />
+                    <b>Pruritus</b>: Levocetirizine syrup provides relief from pruritus, which is characterized by
+                    intense itching caused by conditions like eczema, allergic reactions, and insect bites.
+                </p>
+                <br />
+                <h3 id="mechanism">Mechanism</h3>
+                <hr style="width: 35%;" />
+                <p>Levocetirizine is the active enantiomer of cetirizine, which means it is a single isomer of the
+                    molecule that has more potent antihistamine activity and fewer side effects .It works by blocking
+                    the action of histamine, a chemical that is released by the body in response to an allergen.
+                    Histamine is responsible for many of the symptoms associated with allergies, such as itching,
+                    sneezing, runny nose, and hives.
+                </p>
+                <br />
+                <h3 id="pharmacokinetics">Pharmacokinetics</h3>
+                <hr style="width: 35%;" />
+                <p><b>Absorption</b>:Rapidly and extensively absorbed. T max is 0.9 h. C max is 270 and 308 ng/mL after
+                    single and repeated once-daily dosing, respectively. Steady state achieved after 2 days.
+                    <br /><br />
+                    <b>Distribution</b>: Plasma protein binding about 92%. Vd is approximately 0.4 L/kg.
+                    <br /><br />
+                    <b>Metabolism</b>: Metabolism is less than 14% and by aromatic oxidation, N- and O'Dealkylation, and
+                    taurine conjugation.
+                    <br /><br />
+                    <b>Elimination</b>: The t ½ is about 8 to 9 h. Elimination is 85.4% and 12.9% via urine and feces,
+                    respectively. Excreted both by glomerular filtration and active tubular transport.
+                </p>
+                <br />
+                <h3 id="interactions">Interactions</h3>
+                <hr style="width: 35%;" />
+                <p><b>Levocetirizine Syrup have interactions with other antihistamines (such as diphenhydramine),
+                        antidepressants (such as duloxetine), pain killers (such as pregabalin), a medicine used to
+                        treat low blood pressure (such as midodrine), a medicine used to treat anxiety disorders and
+                        panic disorder (such as alprazolam) and anti-viral or anti-HIV drugs (such as ritonavir).</b>
+                </p>
+                <br />
+                <h3 id="contraindications">Contraindications</h3>
+                <hr style="width: 35%;" />
+                <p>Patients with a known hypersensitivity to levocetirizine or any of the ingredients of levocetirizine
+                    dihydrochloride oral solution or to cetirizine Children 6 months to 11 years of age with renal
+                    impairment.
+                </p>
+                <br />
+                <h3 id="side effects">Side Effects</h3>
+                <hr style="width: 35%;" />
+                <p><b>The most commonly reported adverse effects are:</b></p>
+                <ul class="custom-bullet">
+                    <li><span class="dot"></span>Drowsiness and fatigue</li>
+                    <li><span class="dot"></span>Dizziness</li>
+                    <li><span class="dot"></span>Dry Mouth</li>
+                    <li><span class="dot"></span>Nausea and headache</li>
+                </ul>
+                <br />
+                <h3 id="warning">Warning</h3>
+                <hr style="width: 35%;" />
+                <p><b><i>"Response to medication may vary from one individual to another, containing side effects like
+                            (vertigo, dizziness, nervousness, insomnia) that have been reported very rarely."
+                            To rule out any unpleasant side effects or interactions, inform your doctor about your
+                            child's health condition and the medications received. Do not give more than the stated
+                            recommended dose.</i></b>
+                </p>
+                <br />
+                <h3 id="storage">Storage</h3>
+                <hr style="width: 35%;" />
+                <p>Store in a well closed container in a cool, dry place, away from direct heat and light.
+                </p>
+                <br />
+                <h3 id="conclusion">Conclusion</h3>
+                <hr style="width: 35%;" />
+                <p><b>From the above discussion, it can be concluded that this Levocetirizine dihydrochloride syrup
+                        could improve the symptoms of Allergic Rhinitis and Chronic Idiopathic Urticaria.</b>
+                </p>
+            </section>
+        </div>
+
+        <br /><br />
+        <p class="disclaimer">Disclaimer: The data uploaded is made from content already available on internet. The
+            company holds no right of it and is not responsible for any wrong information.</p>
+    </div>
+    <br />
+
+    <side-icons></side-icons>
+
+    <special-footer></special-footer>
+
+    <script src="../js/headerFooterManager.js"></script>
+
+
+    <script>
+        document.getElementById('mailBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('mailPopup').style.display = 'flex';
+        });
+
+        function closePopup() {
+            document.getElementById('mailPopup').style.display = 'none';
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js"></script>
+
+    <!-- new -->
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/4077c6ef6a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

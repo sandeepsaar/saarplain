@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miscellaneous Products | Saar Biotech| Third party Medicine Contract Manufacturing</title>
+    <meta
+      name="description"
+      content="Explore Saar Biotech's miscellaneous pharmaceutical products, encompassing a diverse range of healthcare solutions. From specialized formulations to innovative healthcare products, our miscellaneous products cater to various medical needs. Discover our commitment to excellence and innovation in pharmaceutical manufacturing."
+    />
+    <meta
+      name="keywords"
+      content="miscellaneous products, pharmaceutical products, healthcare solutions, specialized formulations, innovative healthcare products, pharmaceutical manufacturing, contract manufacturing, pharmaceutical companies, DCGI approved drugs, Saar Biotech, pharmaceuticals export, third-party medicine manufacturers"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/products.css" />
+    <link rel="stylesheet" href="../../css/navbar.css" />
+    <link rel="stylesheet" href="../../fonts/fonts.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../../js/script.js"></script>
+    <script src="../product.js"></script>
+    <script src="../../js/searchscript.js"></script>
+    <script src="../../js/navbar.js"></script>
+  </head>
+
+  <body>
+    <special-header></special-header>
+
+    <!-- banner  -->
+    <!-- 🔍 Search and Filter Section -->
+    <div style="background: url('../../images/banner3.jpg') no-repeat center center / cover; padding: 80px 20px; position: relative">
+      <div style="max-width: 1100px; margin: auto; text-align: center; color: #3cb6a0">
+        <h1 style="font-size: 48px; font-weight: bold; text-align: center; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); margin-bottom: 40px">PRODUCTS</h1>
+
+        <!-- All filters in one row -->
+        <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; align-items: center">
+          <input type="text" id="compositionSearch" placeholder="Search by Composition" style="padding: 12px 15px; font-size: 14px; border-radius: 8px; border: 1px solid #ccc; width: 220px" />
+
+          <select id="mainCategoryDropdown" style="padding: 12px 10px; font-size: 14px; border-radius: 8px; border: 1px solid #ccc; width: 220px">
+            <option value="">Search by Main Category</option>
+          </select>
+
+          <select id="subCategoryDropdown" style="padding: 12px 10px; font-size: 14px; border-radius: 8px; border: 1px solid #ccc; width: 220px">
+            <option value="">Search by Sub Category</option>
+          </select>
+
+          <a href="Miscellaneous Products" style="font-size: 16px; color: #007bff; text-decoration: underline; font-weight: 500">RESET</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mt-3">
+      <div>
+        <div class="product-wrapper">
+          <div class="icon" id="left-btn"><i id="left" class="fa-solid fa-angle-left"></i></div>
+          <ul class="tabs-box" id="categoryTabs">
+            <li class="pro-tab" data-target="Suspensions">Suspensions</li>
+            <li class="pro-tab" data-target="Syrups">Syrups</li>
+            <li class="pro-tab" data-target="Sachets">Sachets</li>
+            <li class="pro-tab" data-target="Capsules">Capsules</li>
+            <li class="pro-tab" data-target="Tablets">Tablets</li>
+            <li class="pro-tab" data-target="Miscellaneous Products">Miscellaneous Products</li>
+            <li class="pro-tab" data-target="External Preparations">External Preparations</li>
+            <li><a href="Miscellaneous Products">Reset</a></li>
+          </ul>
+          <div class="icon" id="right-btn"><i id="right" class="fa-solid fa-angle-right"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Products Table -->
+    <div class="container" style="margin-top: 10px">
+      <table class="pagination_tableStyle___eQEj">
+        <caption>
+          Products
+        </caption>
+        <tbody id="productTableBody"></tbody>
+      </table>
+      <div style="display: flex; justify-content: space-between">
+        <div>
+          Show:
+          <select id="rowsPerPageSelector">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50" selected>50</option>
+          </select>
+          Products
+        </div>
+      </div>
+
+      <div id="paginationControls" style="margin-top: 10px; text-align: center"></div>
+    </div>
+
+    <!-- Include Your Data File -->
+    <script src="../product.js"></script>
+
+    <!-- Filtering Script -->
+    <script>
+      const tableBody = document.getElementById("productTableBody");
+      const tabs = document.querySelectorAll(".pro-tab");
+      const paginationControls = document.getElementById("paginationControls");
+      const rowsPerPageSelector = document.getElementById("rowsPerPageSelector");
+
+      const compositionInput = document.getElementById("compositionSearch");
+      const mainDropdown = document.getElementById("mainCategoryDropdown");
+      const subDropdown = document.getElementById("subCategoryDropdown");
+
+      let allProducts = [];
+      let filteredProducts = [];
+      let currentPage = 1;
+      let rowsPerPage = parseInt(rowsPerPageSelector?.value || 10);
+      let currentCategory = null;
+
+      // Flatten the data into allProducts array
+      data.forEach((main) => {
+        main.subCategories.forEach((sub) => {
+          sub.products.forEach((product) => {
+            allProducts.push({
+              mainCategory: main.mainCategory,
+              subCategory: sub.name,
+              name: product.name,
+              quantity: product.quantity,
+              link: product.link,
+              icon: product.icon,
+            });
+          });
+        });
+      });
+
+      // filteredProducts = [...allProducts];
+      currentCategory = "Miscellaneous Products";
+      filteredProducts = allProducts.filter((item) => item.mainCategory === currentCategory);
+
+      //  Populate dropdowns after allProducts is ready
+      const mainCategories = [...new Set(allProducts.map((p) => p.mainCategory))];
+      const subCategories = [...new Set(allProducts.map((p) => p.subCategory))];
+
+      mainCategories.forEach((cat) => {
+        const opt = document.createElement("option");
+        opt.value = cat;
+        opt.textContent = cat;
+        mainDropdown.appendChild(opt);
+      });
+
+      subCategories.forEach((sub) => {
+        const opt = document.createElement("option");
+        opt.value = sub;
+        opt.textContent = sub;
+        subDropdown.appendChild(opt);
+      });
+
+      function filterAll() {
+        const compVal = compositionInput.value.toLowerCase();
+        const mainVal = mainDropdown.value;
+        const subVal = subDropdown.value;
+
+        filteredProducts = allProducts.filter((p) => {
+          return (compVal === "" || p.name.toLowerCase().includes(compVal)) && (mainVal === "" || p.mainCategory === mainVal) && (subVal === "" || p.subCategory === subVal);
+        });
+
+        currentPage = 1;
+        updatePagination();
+      }
+
+      compositionInput.addEventListener("input", filterAll);
+      mainDropdown.addEventListener("change", filterAll);
+      subDropdown.addEventListener("change", filterAll);
+
+      function displayTable() {
+        tableBody.innerHTML = "";
+        const start = (currentPage - 1) * rowsPerPage;
+        const end = start + rowsPerPage;
+        const pageItems = filteredProducts.slice(start, end);
+
+        let prevMain = "";
+        let prevSub = "";
+
+        pageItems.forEach((item, index) => {
+          // Show Main Category if changed
+          if (item.mainCategory !== prevMain) {
+            let row = document.createElement("tr");
+            row.innerHTML = `<td colspan="3">
+                         <h2 class="pagination_mainCategory__vnEkj">${item.mainCategory}</h2></td>`;
+            tableBody.appendChild(row);
+            prevMain = item.mainCategory;
+            prevSub = ""; // Reset subcategory when main category changes
+          }
+
+          // Show Subcategory if changed
+          if (item.subCategory !== prevSub) {
+            let subRow = document.createElement("tr");
+            subRow.innerHTML = `
+                    <td colspan="3">
+                            <h3 class="pagination_subCategory__KGv4y pagination_tableStyle___eQEj">${item.subCategory}</h3>
+                        </td>
+                    `;
+            tableBody.appendChild(subRow);
+            prevSub = item.subCategory;
+          }
+
+          // Product row
+          let row = document.createElement("tr");
+          row.className = index % 2 === 0 ? "pagination_evenRow__PgBEM" : "pagination_oddRow__NAYxa";
+          row.innerHTML = `
+                    <td class="pagination_rowHover__aeLLO pagination_tableStyle___eQEj pagination_evenRow__PgBEM pagination_indexing__kA6iS pagination_cellPadding___0VKL">
+                        <h5 class="pagination_indexingFont__q0amH">${start + index + 1}</h5>
+                    </td>
+                    <td class="pagination_rowHover__aeLLO">
+                        <a href="${item.link}" style="font-size: 20px; color: black; text-decoration: none; padding: 1.2em 0.7em;">
+                            ${item.name} <img width="20" height="20" src="../${item.icon}" alt="Product Information">
+                        </a>
+                    </td>
+                    <td>${item.quantity}</td>
+                `;
+          tableBody.appendChild(row);
+        });
+        // updatePagination();
+      }
+
+      function renderPaginationControls() {
+        paginationControls.innerHTML = "";
+        const totalPages = Math.ceil(filteredProducts.length / rowsPerPage);
+
+        if (totalPages <= 1) return;
+
+        // Prev Button
+        const prevBtn = document.createElement("button");
+        prevBtn.textContent = "Prev";
+        prevBtn.disabled = currentPage === 1;
+        prevBtn.addEventListener("click", () => {
+          if (currentPage > 1) {
+            currentPage--;
+            updatePagination();
+          }
+        });
+        paginationControls.appendChild(prevBtn);
+
+        // Page Numbers
+        for (let i = 1; i <= totalPages; i++) {
+          const pageBtn = document.createElement("button");
+          pageBtn.textContent = i;
+          if (i === currentPage) {
+            pageBtn.classList.add("active");
+          }
+          pageBtn.addEventListener("click", () => {
+            currentPage = i;
+            updatePagination();
+          });
+          paginationControls.appendChild(pageBtn);
+        }
+
+        // Next Button
+        const nextBtn = document.createElement("button");
+        nextBtn.textContent = "Next";
+        nextBtn.disabled = currentPage === totalPages;
+        nextBtn.addEventListener("click", () => {
+          if (currentPage < totalPages) {
+            currentPage++;
+            updatePagination();
+          }
+        });
+        paginationControls.appendChild(nextBtn);
+      }
+
+      function updatePagination() {
+        const totalPages = Math.ceil(filteredProducts.length / rowsPerPage);
+        if (currentPage > totalPages) currentPage = 1;
+        displayTable();
+        renderPaginationControls();
+      }
+
+      // Tab click logic
+      // tabs.forEach(tab => {
+      //     tab.addEventListener("click", () => {
+      //         currentCategory = tab.getAttribute("data-target");
+      //         filteredProducts = allProducts.filter(item => item.mainCategory === currentCategory);
+      //         currentPage = 1;
+      //         updatePagination();
+      //     });
+      // });
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          currentCategory = tab.getAttribute("data-target");
+          filteredProducts = allProducts.filter((item) => item.mainCategory === currentCategory);
+
+          // Auto-select the Main Category dropdown
+          mainDropdown.value = currentCategory;
+
+          // Reset subcategory
+          subDropdown.value = "";
+
+          // Re-filter using updated dropdown values
+          filterAll(); // This updates UI with dropdown + table
+
+          currentPage = 1;
+          updatePagination();
+        });
+      });
+
+      // Pagination selector change
+      if (rowsPerPageSelector) {
+        rowsPerPageSelector.addEventListener("change", () => {
+          rowsPerPage = parseInt(rowsPerPageSelector.value);
+          currentPage = 1;
+          updatePagination();
+        });
+      }
+
+      displayTable();
+      renderPaginationControls();
+    </script>
+
+    <br /><br />
+
+    <side-icons></side-icons>
+
+    <special-footer></special-footer>
+
+    <script src="../../js/headerFooterManager.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

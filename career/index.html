@@ -16,102 +16,18 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../fonts/fonts.css">
 
     <script src="../js/script.js"></script>
+     <script src="../products/product.js"></script>
+    <script src="../js/searchscript.js"></script>
     <script src="../js/navbar.js"></script>
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="../images/LogoAqua.jpg" alt="Saar Biotech" class="logo">
-            </a>
-
-            <!-- Mobile Menu Button -->
-            <button class="navbar-toggler" type="button" onclick="toggleDrawer()">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <!-- Desktop Menu -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link navbar-links" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link navbar-links" href="about.html">About</a></li>
-
-                    <!-- Manufacturing Unit Dropdown -->
-                    <li class="nav-item dropdown1">
-                        <a class="nav-link navbar-links" href="#"
-                            onclick="toggleDropdown('manufacturingDropdown')">Manufacturing Unit</a>
-                        <ul class="dropdown-content" id="manufacturingDropdown">
-                            <li><a href="saar-biotech.html" class="navbar-dropdown-links">Saar Biotech</a></li>
-                            <li><a href="dm-pharma.html" class="navbar-dropdown-links">DM Pharma</a></li>
-                            <li><a href="infrastructure.html" class="navbar-dropdown-links">Infrastructure</a></li>
-                            <li><a href="video.html" class="navbar-dropdown-links">Factory Video</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Products Dropdown -->
-                    <li class="nav-item dropdown1">
-                        <a class="nav-link navbar-links" href="#"
-                            onclick="toggleDropdown('productsDropdown')">Products</a>
-                        <ul class="dropdown-content" id="productsDropdown">
-                            <li><a href="suspensions.html" class="navbar-dropdown-links">Suspensions</a></li>
-                            <li><a href="syrups.html" class="navbar-dropdown-links">Syrups</a></li>
-                            <li><a href="external-preparations.html" class="navbar-dropdown-links">External
-                                    Preparation</a>
-                            </li>
-                            <li><a href="misc-products.html" class="navbar-dropdown-links">Miscellaneous Products</a>
-                            </li>
-                            <li><a href="tablets.html" class="navbar-dropdown-links">Tablets</a></li>
-                            <li><a href="capsules.html" class="navbar-dropdown-links">Capsules</a></li>
-                            <li><a href="sachets.html" class="navbar-dropdown-links">Sachets</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Events Dropdown -->
-                    <li class="nav-item dropdown1">
-                        <a class="nav-link navbar-links" href="#" onclick="toggleDropdown('eventsDropdown')">Events</a>
-                        <ul class="dropdown-content" id="eventsDropdown">
-                            <li><a href="saar-biotech.html" class="navbar-dropdown-links">B2B</a></li>
-                            <li><a href="dm-pharma.html" class="navbar-dropdown-links">Pharma South 2014</a></li>
-                            <li><a href="infrastructure.html" class="navbar-dropdown-links">Indian Pharma 2013</a></li>
-                            <li><a href="video.html" class="navbar-dropdown-links">Indian Pharma 2012</a></li>
-                            <li><a href="saar-biotech.html" class="navbar-dropdown-links">Brochure</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item"><a class="nav-link navbar-links" href="about.html">Careers</a></li>
-                    <li class="nav-item"><a class="nav-link navbar-links" href="about.html">Articles</a></li>
-
-                    <li class="nav-item"><a class="nav-link navbar-links" href="contact.html">Contact</a></li>
-
-                    <!-- Search Icon -->
-                    <li class="nav-item">
-                        <button class="btn btn-light" onclick="toggleSearchBar()">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Mobile Drawer -->
-    <div id="mobileDrawer" class="drawer">
-        <button class="close-btn" onclick="toggleDrawer()">&times;</button>
-        <ul class="drawer-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="manufacturing-unit.html">Manufacturing Unit</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
+  <special-header></special-header>
 
 
     <div class="container my-4">
@@ -133,70 +49,11 @@
 
     <br />
 
-    <!-- Footer -->
-    <footer class="bg-black text-white py-4">
-        <div class="container">
-            <div class="row text-center text-md-start">
-                <!-- Contact Us -->
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <h4>Contact Us</h4>
-                    <p><strong>Mr. Abhinav Aggrawal</strong></p>
-                    <p class="color-primary">(Chief Operating Officer)</p>
-                    <p>
-                        <a href="tel:+919357888588" class="text-light text-decoration-none">
-                            <i class="fas fa-phone-alt"></i> +91 9357 888 588
-                        </a>
-                    </p>
-                    <p>
-                        <a href="mailto:abhinav@dmpharma.org" class="text-light text-decoration-none">
-                            <i class="fas fa-envelope"></i> abhinav@dmpharma.org
-                        </a>
-                    </p>
-                </div>
+    <side-icons></side-icons>
 
-                <!-- Product Queries -->
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <h4>For Product Queries Call</h4>
-                    <p><strong>Mr. Vijay</strong></p>
-                    <p class="color-primary">(Marketing Manager)</p>
-                    <p>
-                        <a href="tel:+919357690454" class="text-light text-decoration-none">
-                            <i class="fas fa-phone-alt"></i> +91 9357 690 454
-                        </a>
-                    </p>
-                    <p>
-                        <a href="mailto:quotation@saarbiotech.com" class="text-light text-decoration-none">
-                            <i class="fas fa-envelope"></i> quotation@saarbiotech.com
-                        </a>
-                    </p>
-                </div>
+    <special-footer></special-footer>
 
-                <!-- Follow Us -->
-                <div class="col-12 col-md-4 mb-4 text-center">
-                    <h4>Follow Us on</h4>
-                    <div class="d-flex justify-content-center gap-3 mt-3 social-icon">
-                        <a href="https://x.com/SaarBiotech" target="_blank" class="text-light fs-4">
-                            <i class="fab fa-x-twitter"></i>
-                        </a>
-                        <a href="https://www.facebook.com/SaarBiotech" target="_blank" class="text-light fs-4">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://linkedin.com/company/saarbiotech" target="_blank" class="text-light fs-4">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://instagram.com/saarbiotech" target="_blank" class="text-light fs-4">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <hr class="border-primary my-3">
-            <p class="text-center text-light m-0">
-                &copy; <span class="color-primary">Saar Biotech</span>. All Rights Reserved.
-            </p>
-        </div>
-    </footer>
+    <script src="../js/headerFooterManager.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

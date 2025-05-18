@@ -1,0 +1,14 @@
+
+RewriteOptions inherit
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^saarbiotech\.in$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saarbiotech\.in$
+RewriteRule ^infinity\/infinity$ "https\:\/\/saar\.short\.gy\/infinity" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saarbiotech\.in$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saarbiotech\.in$
+RewriteRule ^infinity\/leads$ "https\:\/\/lookerstudio\.google\.com\/reporting\/e54aa7f6\-453c\-4d39\-a928\-5421ba4431f8" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saarbiotech\.in$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saarbiotech\.in$
+RewriteRule ^infinity\/profitability$ "https\:\/\/lookerstudio\.google\.com\/reporting\/4bf630da\-064b\-401e\-9832\-28c3c7e48081" [R=301,L]
+

@@ -1,0 +1,74 @@
+/* CSS Document */
+#survey,#survey_thanks{font-size:80%}
+p#surveyDenied{text-align:right;color: #cc0202;margin: 0;padding:0;}
+p#surveyDenied a{color:#cc0202;}
+div#error_message{font-weight:bold;color: #FF0000}
+
+/* popup_box DIV-Styles*/
+#popup_box {  
+    display:none;  /* Hide the DIV */
+    position:fixed;  
+    _position:absolute; /* hack for internet explorer 6 */  
+    height:400px;  
+    width:550px; 
+	  
+background: rgb(69,72,77); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(69,72,77,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+
+-webkit-box-shadow: 10px 10px 5px 0px rgba(51,48,51,1);
+-moz-box-shadow: 10px 10px 5px 0px rgba(51,48,51,1);
+box-shadow: 10px 10px 5px 0px rgba(51,48,51,1);
+
+
+    left: 300px; font-style:italic;  color:#FFF; font-family:Verdana, Geneva, sans-serif; font-size:20px; 
+    top: 150px;
+    z-index:1800; /* Layering ( on-top of others), if you have lots of layers: I just maximized, you can change it yourself */
+    margin-left: 15px; color:#fff;  
+    
+    /* additional features, can be omitted */
+    border:10px solid #000000; text-align:left; text-shadow:#C90 6px 6x 6px 6px;      
+    padding:0px 15px 15px 15px;  
+   
+  
+}
+#popup_box h1{ text-align:center; color:#cc0000; font-size:20px; font-style:normal;}  
+
+.request-btn1 { display: block; width: 200px; height: 29px;background: #959595; /* Old browsers */
+background: -moz-linear-gradient(left,  #959595 0%, #0d0d0d 46%, #010101 50%, #0a0a0a 53%, #4e4e4e 76%, #383838 87%, #1b1b1b 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#959595), color-stop(46%,#0d0d0d), color-stop(50%,#010101), color-stop(53%,#0a0a0a), color-stop(76%,#4e4e4e), color-stop(87%,#383838), color-stop(100%,#1b1b1b)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* IE10+ */
+background: linear-gradient(to right,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=1 ); /* IE6-9 */
+ font-size: 15px; color: #ff7400; font-weight: bold; text-align: left; line-height: 38px; text-decoration: none ;  text-shadow: #feccb1 1px 1px 1px; margin-top: 20px; 
+ 
+ 
+ }
+ .request-btn1:hover { color: #fff; background-position: 0 bottom; text-shadow: #196000 1px 1px 1px; }
+
+#popup_box a{  
+cursor: pointer;  
+text-decoration:none;  
+} 
+
+/* This is for the positioning of the Close Link */
+#popupBoxClose {
+    font-size:20px;  
+    line-height:15px;  
+    right:1px;  
+    top:5px;  
+    position:absolute;  
+    color:#6fa5e2;  
+    font-weight:500;      
+}
+
+

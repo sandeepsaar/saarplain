@@ -139,3 +139,162 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var productImg = document.getElementById("ProductImg");
+    var smallImgs = document.querySelectorAll(".small-img");
+
+    smallImgs.forEach(function (img) {
+      img.addEventListener("click", function () {
+        productImg.src = this.src;
+      });
+    });
+  });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabsBox = document.querySelector(".tabs-box"),
+        allTabs = tabsBox?.querySelectorAll(".tab"),
+        arrowIcons = document.querySelectorAll(".icon i");
+
+    let isDragging = false;
+
+    const handleIcons = (scrollVal) => {
+        let maxScrollableWidth = tabsBox.scrollWidth - tabsBox.clientWidth;
+        arrowIcons[0].parentElement.style.display = scrollVal <= 0 ? "none" : "flex";
+        arrowIcons[1].parentElement.style.display =
+            maxScrollableWidth - scrollVal <= 1 ? "none" : "flex";
+    };
+
+    arrowIcons.forEach((icon) => {
+        icon.addEventListener("click", () => {
+            let scrollAmount = icon.id === "left" ? -340 : 340;
+            tabsBox.scrollLeft += scrollAmount;
+            handleIcons(tabsBox.scrollLeft);
+        });
+    });
+
+    allTabs?.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            // Add active class
+            tabsBox.querySelector(".active")?.classList.remove("active");
+            tab.classList.add("active");
+
+            // Scroll to the section with offset
+            const targetId = tab.getAttribute("data-target");
+            const targetSection = document.getElementById(targetId);
+            const offset = 100; // Adjust based on your fixed tab height
+
+            if (targetSection) {
+                const elementPosition = targetSection.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+
+    // Initial icon visibility update
+    handleIcons(tabsBox.scrollLeft);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const whatsappBtns = document.querySelectorAll(".whatsapp-btn");
+  
+    whatsappBtns.forEach((btn) => {
+      const productName = btn.getAttribute("data-product");
+      const phoneNumber = "919876543210"; // Your number
+      const message = `Hello! Want to enquire about Product: ${productName}`;
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  
+      btn.setAttribute("href", whatsappURL);
+    });
+  });
+
+
+//   career form 
+// document.addEventListener('DOMContentLoaded', function () {
+//     const applyForm = document.querySelector('.job-form'); 
+//     if (applyForm) {
+//       applyForm.addEventListener('submit', function (e) {
+//         e.preventDefault();
+//         console.log("Form submitted!");
+//       });
+//     }
+//   });
+document.addEventListener('DOMContentLoaded', function () {
+    const applyBtn = document.getElementById('applyBtn');
+    const jobForm = document.getElementById('jobApplicationForm');
+  
+    // Show form on button click
+    applyBtn.addEventListener('click', function () {
+      jobForm.classList.remove('hidden');
+    });
+  
+    // Handle form submit
+    jobForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+  
+      // Collect form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const resume = document.getElementById('resume').files[0]?.name || 'No file';
+  
+      console.log("Form submitted:");
+      console.log("Name:", name);
+      console.log("Email:", email);
+      console.log("Phone:", phone);
+      console.log("Resume:", resume);
+    });
+  });
+
+
+//   side icons 
+document.addEventListener('DOMContentLoaded', () => {
+    // Get the mail popup element
+    const mailPopup = document.getElementById('mailPopup');
+  
+    // Floating mail button
+    const floatingMailBtn = document.getElementById('floatingMailBtn');
+    if (floatingMailBtn && mailPopup) {
+      floatingMailBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        mailPopup.style.display = 'flex';
+      });
+    }
+  
+    // Mobile bar mail button
+    const mobileMailBtn = document.getElementById('mobileMailBtn');
+    if (mobileMailBtn && mailPopup) {
+      mobileMailBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        mailPopup.style.display = 'flex';
+      });
+    }
+  
+    // Close popup when clicking outside or on close button
+    document.addEventListener('click', function (e) {
+      if (e.target.classList.contains('popup-overlay') || e.target.classList.contains('close-popup')) {
+        if (mailPopup) {
+          mailPopup.style.display = 'none';
+        }
+      }
+    });
+  
+    // Scroll example safety (if you're using scrollLeft somewhere)
+    const scrollableElement = document.getElementById('scrollableDiv');
+    if (scrollableElement) {
+      scrollableElement.scrollLeft = 100; // Just example usage
+    }
+  
+    // You can add more logic safely below here
+  });
+  
+  
+  

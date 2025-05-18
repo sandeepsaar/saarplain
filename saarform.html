@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Saar Form</title>
+<!-- Style -->
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="font/stylesheet.css" rel="stylesheet" type="text/css">
+<link href="css/bromoPanel.css" rel="stylesheet" type="text/css">
+	<link rel="shortcut icon" href="images/favicon.ico?cb=1" />
+<link rel="stylesheet" media="all" href="css/stylesheet.css" />
+
+<!-- Style -->
+</head>
+
+<body>
+<div id="contactWrap">
+				
+					
+					<form class="contactForm" name="contact" method="post" action="c2.php" onSubmit="return contactUs();">
+					
+					<table>
+					
+												<tr>
+							<td><label>Name:</label></td>
+							<td><input type="text" name="name" class="nameInput" id="name" value="" maxlength="80" size="30"></td>
+						</tr>
+                        
+												<tr>
+							<td><label>Company:</label></td>
+							<td><input type="text" name="name" class="nameInput" id="cname" value="" maxlength="80" size="30"></td>
+						</tr>
+						<tr>
+							<td><label>M. No:</label></td>
+							<td><input type="text" name="phnum" class="nameInput" id="phnum" value="" maxlength="80" size="30"></td>
+						</tr>
+						
+						<tr>
+							<td><label>Email:</label></td>
+							<td><input type="text" name="email" class="emailInput" id="email" value="" maxlength="80" size="30"></td>
+						</tr>
+						<tr>
+							<td> <label>Query:</label></td>
+							<td>
+								<textarea class="messageInput"  name="query" id="query" maxlength="1000" cols="28" rows="3"></textarea>
+							</td>
+						</tr>
+                    <tr>
+							<td> <label>Upload File:</label></td>
+							<td>
+								<input  type="file" name="attachFile" maxlength="80" size="30">
+							</td>
+						</tr>    
+						  <tr>
+						   <td>&nbsp;</td>
+							<td> 
+							  <input type="submit" class="buttonPro submitBtn"" name="Send" value="Send">
+							   
+							</td>
+						 
+						</tr>
+					
+					
+					</table>
+					  <input type="hidden" name="action" value="contactUs">
+				
+					</form>
+					
+                    
+                </div>
+</body>
+</html>

@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="card job-card p-3">
                         <h5 class="color-primary fw-bold fs-4">${job.title}</h5>
                         <p class="text-muted">${job.description}</p>
-                        <button class="btn btn-primary" onclick="window.location.href='/career/${job.slug}'">View Details</button>
+                        <button class="btn btn-primary" onclick="window.location.href='${job.slug}'">View Details</button>
                     </div>
                 </div>
             `;

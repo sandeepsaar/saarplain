@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saar Biotech - Sodium Chloride and Benzalkonium Chloride Nasal Spray</title>
+    <meta name="description"
+        content="Sodium Chloride and Benzalkonium Chloride Nasal Spray is indicated for use in adults and pediatric patients as a source of electrolytes and water for hydration. Also, designed for use as a diluent and delivery system for intermittent intravenous administration of compatible drug additives.">
+    <meta name="keywords"
+        content="Sodium Chloride, Benzalkonium Chloride, nasal spray, adults, pediatric, electrolytes, water, hydration, alkyldimethylbenzylammonium chloride, salt, seawater, antimicrobial agent, third, party, manufacturer">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="product.js"></script>
+    <script src="../js/searchscript.js"></script>
+    <script src="../js/navbar.js"></script>
+</head>
+
+<body>
+    <special-header></special-header>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div>
+            <div class="row row1">
+                <div class="col-md-6">
+                    <img src="../images/products/sodium-nasal-spray1.jpg" width="100%" id="ProductImg"
+                        class="single_project_thumb" onclick="openModal(this.src)">
+                    <div class="small-imgs-wrapper">
+                        <div class="small-imgs">
+                            <img src="../images/products/sodium-nasal-spray1.jpg" width="100%" class="small-img">
+                            <img src="../images/products/sodium-nasal-spray2.jpg" width="100%" class="small-img">
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div id="imageModal" class="modal" onclick="closeModal()">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <img class="modal-content" id="modalImage">
+                    </div>
+                    <script>
+                        function openModal(src) {
+                            const modal = document.getElementById("imageModal");
+                            const modalImage = document.getElementById("modalImage");
+                            // modal.style.display = "block";
+                            modal.style.display = "flex";
+                            modalImage.src = src;
+                        }
+
+                        function closeModal() {
+                            const modal = document.getElementById("imageModal");
+                            modal.style.display = "none";
+                        }
+                    </script>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="styled-heading mb-5">Sodium Chloride + Benzalkonium Nasal Spray</h4>
+                    <h4 class="responsive"><u>Product Highlights</u></h4>
+                    <h3 class="product-title"><b>Indications</b> -For Nasal Health</h3>
+                    <h3 class="product-title"><b>Approved Name</b> -Sodium Chloride + Benzalkonium Nasal Spray</h3>
+                    <h4 class="responsive"><u>Nasal Spray Presentation</u></h4>
+                    <h3 class="product-title">Composition 1:<br />
+                        Sodium Chloride IP 0.65 % w/v
+                        Added Benzalkonium Chloride Solution
+                        eq. to Benzalkonium Chloride IP 0.01 % w/v
+                        (as Preservatives)<br />
+                        Composition 2:<br />
+                        Sodium Chloride IP 2.6 % w/v
+                        Added Benzalkonium Chloride Solution
+                        eq. to Benzalkonium Chloride IP 0.01 % w/v
+                        (as Preservatives)<br />
+                        Composition 3:<br />
+                        Sodium Chloride IP 0.65 % w/v
+                        Added Benzalkonium Chloride Solution
+                        eq. to Benzalkonium Chloride IP 0.001 % w/v
+                        Phenylmercuric Acetate IP 0.002 % w/v
+                        (as Preservatives)</h3>
+                    <div class="buttons">
+                        <div class="row text-center">
+                            <div class="col-md-6 col-12 d-flex justify-content-center mb-2">
+                                <a href="#" target="_blank" data-product="Sodium Chloride + Benzalkonium Nasal Spray"
+                                    class="custom-btn whatsapp-btn" style="background: rgb(0, 200, 83);"><i
+                                        class="fab fa-whatsapp"></i> Whatsapp</a>
+                            </div>
+                            <div class="col-md-6 col-12 d-flex justify-content-center mb-2">
+                                <a href="#" id="mailBtn" class="custom-btn" style="background: rgb(66, 133, 244);"><i
+                                        class="fas fa-envelope"></i> Mail</a>
+                            </div>
+                            <div id="mailPopup" class="popup-overlay">
+                                <div class="popup-form">
+                                    <h3>Send Us a Message</h3>
+                                    <form action="/php/send-mail.php" method="POST">
+                                        <div style="display: flex; gap: 10px;">
+                                            <input type="text" name="full_name" placeholder="Full Name" required />
+                                            <input type="text" name="company_name" placeholder="Company Name"
+                                                required />
+                                        </div>
+                                        <div style="display: flex; gap: 10px; margin-top: 10px;">
+                                            <input type="email" name="email" placeholder="Email" required />
+                                            <input type="text" name="phone" placeholder="Phone" required />
+                                        </div>
+                                        <textarea name="message" rows="5" placeholder="Message"
+                                            required>Hello!&#10;Want to enquire about&#10;Product: Sodium Chloride + Benzalkonium Nasal Spray</textarea>
+                                        <button type="submit">SEND QUERY</button>
+                                    </form>
+                                    <span class="close-popup" onclick="closePopup()">✕</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="cart">
+            <div class="tab-wrapper">
+                <div class="wrapper">
+                    <div class="icon" id="left-btn"><i id="left" class="fa-solid fa-angle-left"></i></div>
+                    <ul class="tabs-box">
+                        <li class="tab" data-target="description">DESCRIPTION</li>
+                        <li class="tab" data-target="indications">INDICATIONS</li>
+                        <li class="tab" data-target="mechanism">MECHANISM</li>
+                        <li class="tab" data-target="pharmacodynamics">PHARMACODYNAMICS</li>
+                        <li class="tab" data-target="pharmacokinetics">PHARMACOKINETICS</li>
+                        <li class="tab" data-target="side effects">SIDE EFFECTS</li>
+                        <li class="tab" data-target="contraindication">CONTRAINDICATION</li>
+                        <li class="tab" data-target="how to use">HOW TO USE</li>
+                    </ul>
+                    <div class="icon" id="right-btn"><i id="right" class="fa-solid fa-angle-right"></i></div>
+                </div>
+            </div>
+            <section>
+                <h3>Saar Biotech</h3>
+                <hr style="width: 35%;" />
+                <p>Saar Biotech Pvt. Ltd. is a distinguished <b>WHO-GMP certified</b> pharmaceutical manufacturing
+                    company
+                    in <b>Baddi,
+                        Chandigarh</b>, renowned for its dedication to quality and innovation. Since 2005, we have been
+                    at
+                    the
+                    forefront of the industry, operating from our state-of-the-art facility in Baddi, with a central
+                    office
+                    in Chandigarh.
+                    <br /><br />
+                    Specializing in <b>third-party contract</b> manufacturing, we partner with over 1700 clients to
+                    deliver
+                    a wide
+                    range of pharmaceutical products, including Suspensions,Syrups, Ointments, Roll Ons, covering
+                    various
+                    therapeutic segments. Our <b>extensive experience</b> and advanced technology make us a trusted
+                    choice
+                    for
+                    companies seeking reliable manufacturing solutions.
+                    <br /><br />
+                    At Saar Biotech, <b>quality and service</b> are our top priorities. Our <b>stringent quality
+                        standards</b> ensure each
+                    product meets regulatory requirements and exceeds customer expectations. We are committed to
+                    providing
+                    the <b>best service</b> and <b>product quality</b> in the industry.
+                    <br /><br />
+                    Join us at Saar Biotech, where health and quality converge. Experience the difference of partnering
+                    with
+                    a leader in pharmaceutical excellence. <b>Quote Now</b> to start your journey with us.
+                </p>
+                <br />
+                <h3 id="description">DESCRIPTION</h3>
+                <hr style="width: 35%;" />
+                <p><b>Sodium chloride</b>, also known as salt, common salt, table salt or halite, is an ionic compound
+                    with the chemical formula NaCl, representing a 1:1 ratio of sodium and chloride ions. Sodium
+                    chloride is the primary salt in seawater and in the extracellular fluid of many multicellular
+                    organisms.<br />
+                    <b>Benzalkonium chloride</b>, also known alkyldimethylbenzylammonium chloride , is a type of
+                    cationic surfactant. It is an organic salt classified as a quaternary ammonium compound. It has
+                    three main categories of use: as a biocide, a cationic surfactant, and as a phase transfer
+                    agent.<br />
+                    Benzalkonium is a quaternary ammonium compound used as a biocide, a cationic surfactant, and as a
+                    phase transfer agent . It is more commonly contained in consumer products in its salt form,
+                    benzalkonium chloride . This salt is used in a great variety of international pharmaceutical
+                    products such as eye, ear, and nasal drops or sprays as an excipient ingredient serving as an
+                    antimicrobial preservative ,it is an active antimicrobial agent
+                </p>
+                <br />
+                <h3 id="indications">Indications</h3>
+                <hr style="width: 35%;" />
+                <p>Temporarily relieves symptoms associated with sinusitis, cold, flu or allergies for the treatment of
+                    inflammatory skin conditions such as severe eczema, dermatitis, psoriasis and rash.</p>
+                <ul class="custom-bullet">
+                    <li><span class="dot"></span>Sneezing</li>
+                    <li><span class="dot"></span>Nasal Stuffiness</li>
+                    <li><span class="dot"></span>Runny Nose</li>
+                    <li><span class="dot"></span>Post nasal drip</li>
+                    <li><span class="dot"></span>Removes inhaled irritants (dust, pollen)</li>
+                    <li><span class="dot"></span>Helps to loosen thick mucous</li>
+                    <li><span class="dot"></span>Moistens nasal passages</li>
+                    <li><span class="dot"></span>Viral upper respiratory infections</li>
+                    <li><span class="dot"></span>Allergic rhinitis</li>
+                    <li><span class="dot"></span>Nasal congestion</li>
+                    <li><span class="dot"></span>Post-operative conditions (especially after Functional Endoscopic Sinus
+                        Surgery i.e. FESS)</li>
+                </ul>
+                <br />
+                <h3 id="mechanism">Mechanism</h3>
+                <hr style="width: 35%;" />
+                <p>Sodium chloride — major electrolytes of the fluid compartment outside of cells (i.e., extracellular)
+                    — work together to control extracellular volume and blood pressure. Disturbances in sodium
+                    concentrations in the extracellular fluid are associated with disorders of water balance.
+                    Benzalkonium chloride: not entirely elucidated, the bactericidal action of benzalkonium chloride is
+                    believed to be due to the disruption of intermolecular interactions. Such disruption can cause the
+                    dissociation of cellular membrane lipid bilayers of bacteria, resulting in compromised cellular
+                    permeability control and the leakage of important cellular contents, a variety of critical
+                    intermolecular interactions and tertiary structures in very highly specific biochemical systems that
+                    allow bacterial agents to function normally can be readily disrupted or deactivated by cationic
+                    surfactants like benzalkonium.
+                </p>
+                <br />
+                <h3 id="pharmacodynamics">Pharmacodynamics</h3>
+                <hr style="width: 35%;" />
+                <p><b>Sodium chloride</b>:Sodium the major cation of the extracellular fluid, functions primarily in the
+                    control of water distribution, fluid balance, and osmotic pressure of body fluids. Sodium is also
+                    associated with chloride and bicarbonate in the regulation of the acid-base equilibrium of body
+                    fluid. Chloride, the major extracellular anion, closely follows the metabolism of sodium, and
+                    changes in the acid-base balance of the body are reflected by changes in the chloride concentration.
+                    <br /><br />
+                    <b>Benzalkonium chloride</b>:Benzalkonium chloride solutions are generally categorized as biocidal
+                    agents with relative long durations of action. Their spectrum of activity has been demonstrated
+                    against bacteria, to some viruses, fungi, and protozoa , although bacterial spores are treated as
+                    being resistant to the agent. Finally, solutions of benzalkonium chloride are bacteriostatic or
+                    bactericidal based on their concentration. Bacteriostatic agents act to prevent further growth of
+                    bacterial organisms that are present while bactericidal agents function to kill bacteria that are
+                    present . In general, the activity of the agent is not largely affected by pH, but such activity
+                    does increase substantially at higher temperatures and prolonged exposure times.
+                </p>
+                <br />
+                <h3 id="pharmacokinetics">Pharmacokinetics</h3>
+                <hr style="width: 35%;" />
+                <p><b>Sodium chloride:</b><br />
+                    <b>Absorption</b>: of sodium in the small intestine plays an important role in the absorption of
+                    chloride, amino acids, glucose, and water. Chloride, in the form of hydrochloric acid (HCl), is also
+                    an important component of gastric juice, which aids the digestion and absorption of many nutrients.
+                    The volume of distribution is 0.64 L/kg
+                    <br /><b>Elimination</b>: Substantially excreted by the kidneys.
+                    <br /><br />
+                    <b>Benzalkonium chloride:</b><br />
+                    <b>Absorption</b>: benzalkonium chloride absorption was evaluated in women using tampons containing
+                    the agent. Venous blood samples were drawn 15 minutes before the tampon application and then again
+                    at 15 min, 1 h, 3 h, and 24 h after application. Benzalkonium chloride was not detected in any of
+                    the blood samples at any time tested. the excipients will only ever be present at the minimal levels
+                    necessary to maintain the integrity of the product substance.<br />
+                    <b>Metabolism</b>:benzalkonium chloride is structurally a large, positively charged molecule it is
+                    likely poorly absorbed and eliminated largely in faeces, similar to other quaternary ammonium
+                    compounds<br />
+                    <b>Elimination</b>: Administered benzalkonium chloride is likely eliminated largely in faeces,
+                    similar to other quaternary ammonium compounds
+                </p>
+                <br />
+                <h3 id="contraindication">Contraindication</h3>
+                <hr style="width: 35%;" />
+                <ul class="custom-bullet">
+                    <li><span class="dot"></span>Contraindicated in patients with congestive heart failure, severe renal
+                        impairment, conditions of sodium retention, oedema, liver cirrhosis.</li>
+                    <li><span class="dot"></span>Pregnant: Contact your doctor before taking this.</li>
+                </ul>
+                <br />
+                <h3 id="side effects">Side Effects</h3>
+                <hr style="width: 35%;" />
+                <p><b>Though very rare but some of the reported side-effects of this include:</b></p>
+                <ul class="custom-bullet">
+                    <li><span class="dot"></span>Signs of an allergic reaction, like rash</li>
+                    <li><span class="dot"></span>Trouble breathing</li>
+                    <li><span class="dot"></span>Swallowing or talking</li>
+                    <li><span class="dot"></span>Unusual hoarseness</li>
+                    <li><span class="dot"></span>or swelling of the mouth, tongue, throat</li>
+                </ul>
+                <br />
+                <h3 id="how to use">How to use</h3>
+                <hr style="width: 35%;" />
+                <ul class="custom-bullet">
+                    <li><span class="dot"></span>Start by washing your hands thoroughly with soap and water to prevent
+                        any contamination.</li>
+                    <li><span class="dot"></span>Gently blow your nose to clear out any mucus, making it easier for the
+                        drops to reach the affected area.</li>
+                    <li><span class="dot"></span>You can lie down on a bed with your head hanging slightly over the edge
+                        or tilt your head back if you're sitting or standing. For certain conditions, tilting your head
+                        to the side may be recommended.</li>
+                    <li><span class="dot"></span>It's often easier to lay them flat on their back with a towel or pillow
+                        under their neck to tilt their head slightly backward.</li>
+                    <li><span class="dot"></span>Hold the dropper above your nostril without touching it to avoid
+                        contamination.</li>
+                    <li><span class="dot"></span>Place the recommended number of drops into each nostril.</li>
+                    <li><span class="dot"></span>Remain in the same position for about 1 to 2 minutes to allow the drops
+                        to spread properly through the nasal passages.</li>
+                </ul>
+            </section>
+        </div>
+
+        <br /><br />
+        <p class="disclaimer">Disclaimer: The data uploaded is made from content already available on internet. The
+            company holds no right of it and is not responsible for any wrong information.</p>
+    </div>
+    <br />
+
+    <side-icons></side-icons>
+
+    <special-footer></special-footer>
+
+    <script src="../js/headerFooterManager.js"></script>
+
+
+    <script>
+        document.getElementById('mailBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('mailPopup').style.display = 'flex';
+        });
+
+        function closePopup() {
+            document.getElementById('mailPopup').style.display = 'none';
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js"></script>
+
+    <!-- new -->
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/4077c6ef6a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
