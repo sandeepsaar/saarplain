@@ -6,20 +6,12 @@
     <title>Products | Saar Biotech</title>
     <meta name="description" content="Search Products" />
     <meta name="keywords" content="Search Products" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/products.css" />
+    <link rel="stylesheet" href="../css/header-footer.css" />
+    <link rel="stylesheet" href="products.css" />
     <link rel="stylesheet" href="../css/navbar.css" />
     <link rel="stylesheet" href="../fonts/fonts.css" />
 
@@ -37,92 +29,23 @@
 
     <!-- banner  -->
     <!-- 🔍 Search and Filter Section -->
-    <div
-      style="
-        background: url('../images/banner3.jpg') no-repeat center center / cover;
-        padding: 80px 20px;
-        position: relative;
-      "
-    >
-      <div
-        style="
-          max-width: 1100px;
-          margin: auto;
-          text-align: center;
-          color: #3cb6a0;
-        "
-      >
-        <h1
-          style="
-            font-size: 48px;
-            font-weight: bold;
-            text-align: center;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-            margin-bottom: 40px;
-          "
-        >
-          PRODUCTS
-        </h1>
+    <div style="background: url('../images/banner3.jpg') no-repeat center center / cover; padding: 80px 20px; position: relative">
+      <div style="max-width: 1100px; margin: auto; text-align: center; color: #3cb6a0">
+        <h1 style="font-size: 48px; font-weight: bold; text-align: center; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); margin-bottom: 40px">PRODUCTS</h1>
 
         <!-- All filters in one row -->
-        <div
-          style="
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-            align-items: center;
-          "
-        >
-          <input
-            type="text"
-            id="compositionSearch"
-            placeholder="Search by Composition"
-            style="
-              padding: 12px 15px;
-              font-size: 14px;
-              border-radius: 8px;
-              border: 1px solid #ccc;
-              width: 220px;
-            "
-          />
+        <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; align-items: center">
+          <input type="text" id="compositionSearch" placeholder="Search by Composition" style="padding: 12px 15px; font-size: 14px; border-radius: 8px; border: 1px solid #ccc; width: 220px" />
 
-          <select
-            id="mainCategoryDropdown"
-            style="
-              padding: 12px 10px;
-              font-size: 14px;
-              border-radius: 8px;
-              border: 1px solid #ccc;
-              width: 220px;
-            "
-          >
+          <select id="mainCategoryDropdown" style="padding: 12px 10px; font-size: 14px; border-radius: 8px; border: 1px solid #ccc; width: 220px">
             <option value="">Search by Main Category</option>
           </select>
 
-          <select
-            id="subCategoryDropdown"
-            style="
-              padding: 12px 10px;
-              font-size: 14px;
-              border-radius: 8px;
-              border: 1px solid #ccc;
-              width: 220px;
-            "
-          >
+          <select id="subCategoryDropdown" style="padding: 12px 10px; font-size: 14px; border-radius: 8px; border: 1px solid #ccc; width: 220px">
             <option value="">Search by Sub Category</option>
           </select>
 
-          <a
-            href="../products/index.html"
-            style="
-              font-size: 16px;
-              color: #007bff;
-              text-decoration: underline;
-              font-weight: 500;
-            "
-            >RESET</a
-          >
+          <a href="../products/index.html" style="font-size: 16px; color: #007bff; text-decoration: underline; font-weight: 500">RESET</a>
         </div>
       </div>
     </div>
@@ -140,12 +63,8 @@
             <li class="pro-tab" data-target="Sachets">Sachets</li>
             <li class="pro-tab" data-target="Capsules">Capsules</li>
             <li class="pro-tab" data-target="Tablets">Tablets</li>
-            <li class="pro-tab" data-target="Miscellaneous Products">
-              Miscellaneous Products
-            </li>
-            <li class="pro-tab" data-target="External Preparations">
-              External Preparations
-            </li>
+            <li class="pro-tab" data-target="Miscellaneous Products">Miscellaneous Products</li>
+            <li class="pro-tab" data-target="External Preparations">External Preparations</li>
             <li><a href="index.html">Reset</a></li>
           </ul>
           <div class="icon" id="right-btn">
@@ -177,10 +96,7 @@
         </div>
       </div>
 
-      <div
-        id="paginationControls"
-        style="margin-top: 10px; text-align: center"
-      ></div>
+      <div id="paginationControls" style="margin-top: 10px; text-align: center"></div>
     </div>
 
     <!-- Include Your Data File -->
@@ -191,9 +107,7 @@
       const tableBody = document.getElementById("productTableBody");
       const tabs = document.querySelectorAll(".pro-tab");
       const paginationControls = document.getElementById("paginationControls");
-      const rowsPerPageSelector = document.getElementById(
-        "rowsPerPageSelector"
-      );
+      const rowsPerPageSelector = document.getElementById("rowsPerPageSelector");
 
       const compositionInput = document.getElementById("compositionSearch");
       const mainDropdown = document.getElementById("mainCategoryDropdown");
@@ -224,9 +138,7 @@
       filteredProducts = [...allProducts];
 
       //  Populate dropdowns after allProducts is ready
-      const mainCategories = [
-        ...new Set(allProducts.map((p) => p.mainCategory)),
-      ];
+      const mainCategories = [...new Set(allProducts.map((p) => p.mainCategory))];
       const subCategories = [...new Set(allProducts.map((p) => p.subCategory))];
 
       mainCategories.forEach((cat) => {
@@ -249,11 +161,7 @@
         const subVal = subDropdown.value;
 
         filteredProducts = allProducts.filter((p) => {
-          return (
-            (compVal === "" || p.name.toLowerCase().includes(compVal)) &&
-            (mainVal === "" || p.mainCategory === mainVal) &&
-            (subVal === "" || p.subCategory === subVal)
-          );
+          return (compVal === "" || p.name.toLowerCase().includes(compVal)) && (mainVal === "" || p.mainCategory === mainVal) && (subVal === "" || p.subCategory === subVal);
         });
 
         currentPage = 1;
@@ -298,23 +206,14 @@
 
           // Product row
           let row = document.createElement("tr");
-          row.className =
-            index % 2 === 0
-              ? "pagination_evenRow__PgBEM"
-              : "pagination_oddRow__NAYxa";
+          row.className = index % 2 === 0 ? "pagination_evenRow__PgBEM" : "pagination_oddRow__NAYxa";
           row.innerHTML = `
                     <td class="pagination_rowHover__aeLLO pagination_tableStyle___eQEj pagination_evenRow__PgBEM pagination_indexing__kA6iS pagination_cellPadding___0VKL">
-                        <h5 class="pagination_indexingFont__q0amH">${
-                          start + index + 1
-                        }</h5>
+                        <h5 class="pagination_indexingFont__q0amH">${start + index + 1}</h5>
                     </td>
                     <td class="pagination_rowHover__aeLLO">
-                        <a href="${
-                          item.link
-                        }" style="font-size: 20px; color: black; text-decoration: none; padding: 1.2em 0.7em;">
-                            ${item.name} <img width="20" height="20" src="${
-            item.icon
-          }" alt="Product Information">
+                        <a href="${item.link}" style="font-size: 20px; color: black; text-decoration: none; padding: 1.2em 0.7em;">
+                            ${item.name} <img width="20" height="20" src="${item.icon}" alt="Product Information">
                         </a>
                     </td>
                     <td>${item.quantity}</td>
@@ -389,9 +288,7 @@
       tabs.forEach((tab) => {
         tab.addEventListener("click", () => {
           currentCategory = tab.getAttribute("data-target");
-          filteredProducts = allProducts.filter(
-            (item) => item.mainCategory === currentCategory
-          );
+          filteredProducts = allProducts.filter((item) => item.mainCategory === currentCategory);
 
           // Auto-select the Main Category dropdown
           mainDropdown.value = currentCategory;

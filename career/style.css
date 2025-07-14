@@ -48,6 +48,54 @@ body {
     border: 1px solid #a8ded4;
 }
 
-.color-primary {
-    color: var(--primary-color);
+.career-card {
+  width: 30rem;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-form .form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3cb6a0;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #3cb6a0;
+}
+
+.hidden {
+  display: none;
+}
+
+.back-btn a {
+  color: #3cb6a0;
 }

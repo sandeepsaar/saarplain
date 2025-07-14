@@ -5,7 +5,7 @@ const data = [
             {
                 name: "Antibiotic",
                 products: [
-                    { name: "AZITHROMYCIN", quantity: "15 ml", link: "azithromycin", icon: "../images/icons/info-64px.png" },
+                    { name: "AZITHROMYCIN", quantity: "15 ml", link: "azithromycin/", icon: "../images/icons/info-64px.png" },
                     { name: "OFLOXACIN", quantity: "30 ml", link: "", icon: "../images/icons/info-64px.png" },
                     { name: "OFLOXACIN + TINIDAZOLE", quantity: "30 ml", link: "", icon: "../images/icons/info-64px.png" },
                     { name: "OFLOXACIN + ORNIDAZOLE", quantity: "30 ml", link: "ofloxacin-ornidazole", icon: "../images/icons/info-64px.png" },
